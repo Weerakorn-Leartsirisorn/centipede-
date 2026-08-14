@@ -10,9 +10,9 @@ export const EXTRA_LIFE = 12000;
 export const START_SEGMENTS = 12;
 
 export const PLAYER_SPEED = 8.6;
-export const BULLET_SPEED = 24;
-export const FIRE_COOLDOWN = 0.18;
-export const RAPID_COOLDOWN = 0.07;
+export const BULLET_SPEED = 18;
+export const FIRE_COOLDOWN = 0.4;
+export const RAPID_COOLDOWN = 0.18;
 export const PLAYER_RADIUS = 0.38;
 
 export const BASE_STEP = 0.2;
