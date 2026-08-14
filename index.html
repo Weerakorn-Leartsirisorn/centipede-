@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centipede</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <canvas id="c"></canvas>
+    <div id="vignette"></div>
+
+    <div id="hud" class="hidden">
+      <div class="hud-col left">
+        <div class="stat">
+          <span class="label">Score</span>
+          <span id="score" class="value">0</span>
+        </div>
+        <div class="stat combo-stat">
+          <span class="label">Combo</span>
+          <span id="combo" class="value">x1</span>
+        </div>
+      </div>
+      <div class="hud-col center">
+        <div id="wave-banner"></div>
+        <div id="powerup-bar"></div>
+      </div>
+      <div class="hud-col right">
+        <div class="stat">
+          <span class="label">Wave</span>
+          <span id="wave" class="value">1</span>
+        </div>
+        <div class="stat">
+          <span class="label">Lives</span>
+          <span id="lives" class="value lives">●●●</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="overlay">
+      <div class="menu-card" id="menu-card">
+        <p class="eyebrow">Isometric arcade</p>
+        <h1>CENTIPEDE</h1>
+        <p class="subtitle" id="menu-sub">Blast the swarm. Hold the garden.</p>
+        <div class="menu-actions" id="menu-actions">
+          <button id="btn-primary" type="button">Start</button>
+        </div>
+        <p class="hint">
+          WASD / Arrows move · Mouse aim · Click or Space fire · Esc pause
+        </p>
+        <p id="high-score" class="high-score"></p>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
