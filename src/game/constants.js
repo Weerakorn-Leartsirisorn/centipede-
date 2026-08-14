@@ -36,7 +36,7 @@ export const HIGH_SCORE_KEY = 'centipede-highscore';
 
 export const COLORS = {
   bg: 0x07080d,
-  ground: 0x10161f,
+  ground: 0x1a2430,
   grid: 0x2a6d68,
   cyan: 0x5cffea,
   magenta: 0xff4d9a,
