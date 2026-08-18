@@ -13,6 +13,7 @@ import {
   HIGH_SCORE_KEY,
   COLORS,
   INVULN_TIME,
+  PLAYER_RADIUS,
   colRowToWorld,
   worldToColRow,
   xzDist,
@@ -152,6 +153,10 @@ export class Game {
 
   #addMushroom(col, row, poisoned = false) {
     if (!this.grid.inBounds(col, row) || this.grid.get(col, row)) return null;
+    if (this.player) {
+      const { x, z } = colRowToWorld(col, row);
+      if (Math.hypot(this.player.position.x - x, this.player.position.z - z) < PLAYER_RADIUS + 0.35) return null;
+    }
     const m = new Mushroom(this.arena.scene, col, row, poisoned);
     this.grid.set(col, row, m);
     return m;
